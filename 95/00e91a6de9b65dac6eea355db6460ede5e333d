@@ -1,0 +1,21 @@
+.gitignore
+  s_2ef5a89373c2b9::t_29dfc2ab91d31a 1
+staff-product-designer-dubai/index.html
+  s_2ef5a89373c2b9::t_cf5585ed0342b1 406-407,418-428,430-437,439-444,446-454,457
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "9500e91a6de9b65dac6eea355db6460ede5e333d",
+  "prompts": {},
+  "sessions": {
+    "s_2ef5a89373c2b9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3ca05d0d-6399-45d9-b7e8-52bf816df606",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Mohammad Azaz <mohammad.azaz@deliveryhero.com>"
+    }
+  }
+}
