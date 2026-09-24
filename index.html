@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Staff Product Designer, Dubai — talabat</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Open Roles — talabat</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -18,10 +16,9 @@
     --border:#ECECEC;
     --radius-lg:20px;
     --radius-pill:200px;
-    --max-w:1100px;
+    --max-w:900px;
   }
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
   body{
     margin:0;
     font-family:'Outfit', Arial, sans-serif;
@@ -31,529 +28,79 @@
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;}
   .wrap{max-width:var(--max-w);margin:0 auto;padding:0 24px;}
 
-  /* NAV */
-  .nav{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:20px 24px;border-bottom:1px solid var(--border);
-    position:sticky;top:0;background:var(--bg);z-index:50;
+  header{
+    background:var(--orange);color:#fff;padding:72px 0 56px;
   }
-  .nav-inner{max-width:var(--max-w);margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;}
-  .logo{font-weight:800;font-size:24px;color:var(--orange);letter-spacing:-0.5px;}
-  .nav-links{display:flex;gap:32px;font-weight:600;font-size:15px;color:var(--ink);}
-  .nav-links a:hover{color:var(--orange);}
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;
-    background:var(--orange);color:#fff;font-weight:700;font-size:16px;
-    padding:14px 32px;border-radius:var(--radius-pill);border:none;cursor:pointer;
-    transition:background .2s ease, transform .2s ease;
-  }
-  .btn:hover{background:var(--orange-dark);transform:translateY(-1px);}
-  .btn-sm{padding:10px 22px;font-size:14px;}
-  .btn-outline{
-    background:transparent;color:var(--orange);border:2px solid var(--orange);
-  }
-  .btn-outline:hover{background:var(--orange);color:#fff;}
+  .logo{font-weight:800;font-size:24px;margin-bottom:24px;}
+  h1{font-size:40px;font-weight:800;margin:0 0 12px;letter-spacing:-1px;}
+  header p{font-size:18px;color:rgba(255,255,255,.92);margin:0;max-width:560px;}
 
-  /* HERO */
-  .hero{
-    background:var(--orange);
-    color:#fff;
-    padding:96px 0 80px;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero-tag{
-    display:inline-block;background:var(--ink);color:#fff;font-weight:700;
-    font-size:14px;letter-spacing:.5px;text-transform:uppercase;
-    padding:8px 18px;border-radius:var(--radius-pill);margin-bottom:24px;
-  }
-  .hero h1{
-    font-size:52px;font-weight:800;line-height:1.1;margin:0 0 24px;max-width:780px;
-    letter-spacing:-1px;
-  }
-  .hero p.sub{
-    font-size:19px;font-weight:400;max-width:640px;margin:0 0 36px;color:rgba(255,255,255,.92);
-  }
-  .hero-meta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px;}
-  .hero-meta span{
-    background:rgba(255,255,255,.16);
-    padding:9px 18px;border-radius:var(--radius-pill);font-size:14px;font-weight:600;
-  }
-  .hero .btn-white{background:#fff;color:var(--orange);}
-  .hero .btn-white:hover{background:var(--ink);color:#fff;}
-
-  /* SECTIONS */
-  section{padding:88px 0;}
-  section.alt{background:var(--bg-alt);}
-  .eyebrow{
-    color:var(--orange);font-weight:700;font-size:14px;letter-spacing:1.2px;
-    text-transform:uppercase;margin-bottom:12px;
-  }
-  h2{font-size:36px;font-weight:700;margin:0 0 20px;letter-spacing:-0.5px;}
-  h2.center{text-align:center;}
-  .lede{font-size:18px;color:var(--ink-soft);max-width:720px;margin:0 0 48px;}
-  .lede.center{margin-left:auto;margin-right:auto;text-align:center;}
-
-  /* ABOUT COMPANY */
-  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px;}
-  .stat-heading{font-size:22px;font-weight:700;margin:56px 0 6px;}
-  .stat-subtext{font-size:15px;color:var(--ink-soft);margin:0;}
-  .stat-card{
-    background:var(--orange);color:#fff;border-radius:var(--radius-lg);
-    padding:28px 20px;text-align:center;
-  }
-  .stat-card strong{display:block;font-size:32px;font-weight:800;margin-bottom:4px;}
-  .stat-card span{font-size:14px;font-weight:500;opacity:.95;}
-
-  /* ABOUT ROLE */
-  .role-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
-  .role-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;}
-  .role-card h3{margin:0 0 18px;font-size:20px;font-weight:700;}
-  .role-card ul{margin:0;padding:0;list-style:none;}
-  .role-card li{
-    display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);font-size:15.5px;color:var(--ink-soft);
-  }
-  .role-card li:last-child{border-bottom:none;}
-  .check{
-    flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--orange);
-    color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;
-  }
-
-  /* FIT SECTION */
-  .fit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
-  .fit-card{
+  main{padding:56px 0 88px;}
+  .role-list{display:flex;flex-direction:column;gap:16px;}
+  .role-card{
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
     background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);
-    padding:26px;display:flex;gap:16px;align-items:flex-start;
+    padding:26px 28px;transition:border-color .2s ease, transform .2s ease;
   }
-  .fit-icon{
-    flex-shrink:0;width:40px;height:40px;border-radius:12px;background:rgba(255,90,0,.1);
-    color:var(--orange);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;
+  .role-card:hover{border-color:var(--orange);transform:translateY(-2px);}
+  .role-info h2{font-size:19px;font-weight:700;margin:0 0 6px;}
+  .role-meta{display:flex;gap:10px;flex-wrap:wrap;}
+  .role-meta span{
+    background:var(--bg-alt);color:var(--ink-soft);font-size:12.5px;font-weight:600;
+    padding:5px 12px;border-radius:var(--radius-pill);
   }
-  .fit-card p{margin:0;font-size:15.5px;color:var(--ink-soft);}
-  .fit-card strong{display:block;color:var(--ink);font-size:16px;margin-bottom:4px;}
-
-  /* TEAM — ORG CHART */
-  .org-chart{display:flex;flex-direction:column;align-items:center;}
-  .org-node{
-    background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);
-    padding:22px 26px;text-align:center;width:240px;
+  .role-arrow{
+    flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--bg-alt);
+    color:var(--orange);display:flex;align-items:center;justify-content:center;
+    font-size:18px;font-weight:800;transition:background .2s ease, color .2s ease;
   }
-  .org-node h3{margin:0 0 4px;font-size:17px;font-weight:700;}
-  .org-role{color:var(--orange);font-weight:600;font-size:13.5px;margin-bottom:14px;}
-  .li-link{
-    display:inline-flex;align-items:center;justify-content:center;
-    width:36px;height:36px;border-radius:50%;background:var(--bg-alt);color:var(--ink);
-    transition:background .2s ease, color .2s ease;
-  }
-  .li-link:hover{background:var(--orange);color:#fff;}
-  .org-node.manager{border:2px solid var(--orange);position:relative;}
-  .hm-badge{
-    position:absolute;top:-13px;left:50%;transform:translateX(-50%);
-    background:var(--orange);color:#fff;font-size:11px;font-weight:700;
-    padding:5px 14px;border-radius:var(--radius-pill);letter-spacing:.5px;text-transform:uppercase;
-    white-space:nowrap;
-  }
-  .org-connector{width:2px;height:36px;background:var(--border);}
-  .org-peers{
-    display:flex;gap:20px;justify-content:center;flex-wrap:wrap;
-    position:relative;padding-top:36px;width:100%;
-  }
-  .org-peers::before{
-    content:'';position:absolute;top:0;left:14%;right:14%;height:2px;background:var(--border);
-  }
-  .org-peer{position:relative;}
-  .org-peer::before{
-    content:'';position:absolute;top:-36px;left:50%;width:2px;height:36px;background:var(--border);
-  }
-
-  /* COMPENSATION */
-  .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .comp-card{
-    background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;
-  }
-  .comp-card .fit-icon{margin-bottom:16px;}
-  .comp-card h3{margin:0 0 8px;font-size:17px;font-weight:700;}
-  .comp-card p{margin:0;font-size:14.5px;color:var(--ink-soft);}
-  .comp-note{
-    margin-top:28px;font-size:13.5px;color:var(--ink-soft);font-style:italic;
-  }
-
-  /* FAQ */
-  .faq-list{max-width:800px;margin:0 auto;}
-  .faq-item{
-    background:#fff;border:1px solid var(--border);border-radius:16px;
-    margin-bottom:14px;overflow:hidden;
-  }
-  .faq-question{
-    display:flex;align-items:center;justify-content:space-between;gap:16px;
-    width:100%;background:none;border:none;text-align:left;cursor:pointer;
-    padding:22px 26px;font-family:inherit;font-size:16.5px;font-weight:700;color:var(--ink);
-  }
-  .faq-chevron{
-    flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--bg-alt);
-    display:flex;align-items:center;justify-content:center;
-    transition:transform .3s ease, background .3s ease, color .3s ease;
-  }
-  .faq-item.open .faq-chevron{transform:rotate(180deg);background:var(--orange);color:#fff;}
-  .faq-chevron svg{width:14px;height:14px;}
-  .faq-answer{
-    max-height:0;overflow:hidden;transition:max-height .35s ease, padding .35s ease;
-    padding:0 26px;
-  }
-  .faq-item.open .faq-answer{padding:0 26px 24px;}
-  .faq-answer p{margin:0;font-size:15px;color:var(--ink-soft);}
-
-  /* FINAL CTA */
-  .cta{
-    background:var(--ink);color:#fff;text-align:center;padding:96px 0;
-  }
-  .cta h2{color:#fff;}
-  .cta p{color:rgba(255,255,255,.75);font-size:18px;max-width:560px;margin:0 auto 36px;}
+  .role-card:hover .role-arrow{background:var(--orange);color:#fff;}
 
   footer{
-    background:var(--orange);color:#fff;padding:48px 0 32px;
-  }
-  .footer-top{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.3);}
-  .footer-links{display:flex;gap:28px;font-weight:600;font-size:14px;flex-wrap:wrap;}
-  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;flex-wrap:wrap;gap:16px;font-size:13.5px;}
-  .social{display:flex;gap:12px;}
-  .social a{
-    width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.2);
-    display:flex;align-items:center;justify-content:center;
+    border-top:1px solid var(--border);padding:28px 0;text-align:center;
+    font-size:13.5px;color:var(--ink-soft);
   }
 
-  @media (max-width:900px){
-    .stat-grid{grid-template-columns:repeat(2,1fr);}
-    .role-grid{grid-template-columns:1fr;}
-    .fit-grid{grid-template-columns:1fr;}
-    .org-peers{flex-direction:column;align-items:center;}
-    .org-peers::before{display:none;}
-    .org-peer::before{display:none;}
-    .comp-grid{grid-template-columns:1fr;}
-    .hero h1{font-size:38px;}
-    h2{font-size:28px;}
-    .nav-links{display:none;}
+  @media (max-width:600px){
+    h1{font-size:30px;}
+    .role-card{flex-direction:column;align-items:flex-start;}
+    .role-arrow{align-self:flex-end;}
   }
 </style>
 </head>
 <body>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <div class="logo">talabat</div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#role">The Role</a>
-      <a href="#team">Team</a>
-      <a href="#benefits">Benefits</a>
-      <a href="#faq">FAQ</a>
-    </div>
-    <a href="https://jobs.smartrecruiters.com/oneclick-ui/company/DeliveryHero/publication/639fb736-1c87-4c2d-b922-86ae0f1b1a3d?dcr_ci=DeliveryHero&sid=d36bd984-ac64-4485-84c6-e1569efc1ec5" target="_blank" rel="noopener" class="btn btn-sm">Apply now</a>
-  </div>
-</nav>
-
-<header class="hero">
+<header>
   <div class="wrap">
-    <span class="hero-tag">We're hiring</span>
-    <h1>Shape how quick commerce feels across the region.</h1>
-    <p class="sub">talabat is building a new Global Qcommerce Hub — and we need a Staff Product Designer to bridge regional innovation with global standards, from our Dubai Tech Hub to Berlin and beyond.</p>
-    <div class="hero-meta">
-      <span>📍 Dubai, UAE</span>
-      <span>🏢 On-site</span>
-      <span>🎯 Product Design</span>
-      <span>🕐 Full-time</span>
-    </div>
-    <a href="https://jobs.smartrecruiters.com/oneclick-ui/company/DeliveryHero/publication/639fb736-1c87-4c2d-b922-86ae0f1b1a3d?dcr_ci=DeliveryHero&sid=d36bd984-ac64-4485-84c6-e1569efc1ec5" target="_blank" rel="noopener" class="btn btn-white">Apply now →</a>
+    <div class="logo">talabat</div>
+    <h1>Open roles</h1>
+    <p>We're hiring across product, design, and engineering. Pick a role below to learn more.</p>
   </div>
 </header>
 
-<section id="about">
+<main>
   <div class="wrap">
-    <div class="eyebrow">About the company</div>
-    <h2>Who we are</h2>
-    <p class="lede">talabat is part of Delivery Hero, one of the world's leading local delivery platforms. Delivery Hero operates a global ecosystem of local delivery brands — spanning food, grocery, and quick commerce — across Asia, Europe, Latin America, the Middle East, and North Africa. As a Staff Product Designer on talabat's Global Qcommerce Hub, you'll be shaping products for one of the region's leading brands, backed by the scale and infrastructure of the wider Delivery Hero Group.</p>
-    <h3 class="stat-heading">Delivery Hero in numbers</h3>
-    <p class="stat-subtext">The stats behind our extensive ecosystem.</p>
-    <div class="stat-grid">
-      <div class="stat-card"><strong>50,000</strong><span>Employees worldwide</span></div>
-      <div class="stat-card"><strong>65</strong><span>Countries</span></div>
-      <div class="stat-card"><strong>11</strong><span>Brands</span></div>
-      <div class="stat-card"><strong>800</strong><span>Approx. dmarts</span></div>
+    <div class="role-list">
+      <a class="role-card" href="staff-product-designer-dubai/">
+        <div class="role-info">
+          <h2>Staff Product Designer</h2>
+          <div class="role-meta">
+            <span>📍 Dubai, UAE</span>
+            <span>🎯 Product Design</span>
+            <span>🕐 Full-time</span>
+          </div>
+        </div>
+        <div class="role-arrow">→</div>
+      </a>
     </div>
   </div>
-</section>
-
-<section class="alt" id="role">
-  <div class="wrap">
-    <div class="eyebrow">About the role</div>
-    <h2>What you'll be doing</h2>
-    <p class="lede">As Staff Product Designer, you'll lead design for newly formed Global Qcommerce Hub squads — owning end-to-end design processes and setting the bar for how our products look, feel, and function across dozens of markets.</p>
-    <div class="role-grid">
-      <div class="role-card">
-        <h3>Key responsibilities</h3>
-        <ul>
-          <li><span class="check">✓</span>Align design strategy with product vision through cross-functional collaboration</li>
-          <li><span class="check">✓</span>Transform complex user and business requirements into user-centric solutions</li>
-          <li><span class="check">✓</span>Own end-to-end design: discovery, research, high-fidelity design, implementation support</li>
-          <li><span class="check">✓</span>Produce production-ready web and mobile experiences in Figma</li>
-          <li><span class="check">✓</span>Advocate for user needs in product discussions</li>
-          <li><span class="check">✓</span>Champion design best practices and mentor team members</li>
-        </ul>
-      </div>
-      <div class="role-card">
-        <h3>Where you'll sit</h3>
-        <ul>
-          <li><span class="check">✓</span>Based at talabat's Dubai Tech Hub, on-site</li>
-          <li><span class="check">✓</span>Working closely with Berlin-based global teams</li>
-          <li><span class="check">✓</span>Partnering with PMs, engineers, and researchers daily</li>
-          <li><span class="check">✓</span>Designing for heavy, data-dense B2B and B2C surfaces</li>
-          <li><span class="check">✓</span>Influencing design standards used across the region</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="team">
-  <div class="wrap">
-    <div class="eyebrow">Meet the team</div>
-    <h2>Who you'll work with</h2>
-    <p class="lede">Here's where this role sits on the team — your manager and the peers you'll collaborate with most closely.</p>
-    <div class="org-chart">
-      <div class="org-node manager">
-        <span class="hm-badge">You'll report to</span>
-        <h3>Guilherme Simoes</h3>
-        <div class="org-role">Senior Manager, User Experience</div>
-        <a class="li-link" href="https://www.linkedin.com/in/guilherme-dias-simoes/" target="_blank" rel="noopener" aria-label="Guilherme's LinkedIn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-        </a>
-      </div>
-      <div class="org-connector"></div>
-      <div class="org-peers">
-        <div class="org-node org-peer">
-          <h3>Javi Arocha</h3>
-          <div class="org-role">Staff Product Designer</div>
-          <a class="li-link" href="https://www.linkedin.com/in/javier-arocha/" target="_blank" rel="noopener" aria-label="Javi's LinkedIn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-          </a>
-        </div>
-        <div class="org-node org-peer">
-          <h3>Ramona Fabricio</h3>
-          <div class="org-role">Product Designer</div>
-          <a class="li-link" href="https://www.linkedin.com/in/ramona-fabricio-7b465083/" target="_blank" rel="noopener" aria-label="Ramona's LinkedIn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-          </a>
-        </div>
-        <div class="org-node org-peer">
-          <h3>Daniel Mathias</h3>
-          <div class="org-role">Principal Product Designer</div>
-          <a class="li-link" href="https://www.linkedin.com/in/daniel-s-mathias/" target="_blank" rel="noopener" aria-label="Daniel's LinkedIn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-          </a>
-        </div>
-        <div class="org-node org-peer">
-          <h3>Smriti Sharma</h3>
-          <div class="org-role">Senior Product Designer</div>
-          <a class="li-link" href="https://www.linkedin.com/in/s-smriti/" target="_blank" rel="noopener" aria-label="Smriti's LinkedIn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <div class="eyebrow">You're a fit if you...</div>
-    <h2>Does this sound like you?</h2>
-    <div class="fit-grid">
-      <div class="fit-card">
-        <div class="fit-icon">7+</div>
-        <p><strong>Have 7+ years of product design experience</strong>With a strong portfolio showing user-centric solutions across web and mobile.</p>
-      </div>
-      <div class="fit-card">
-        <div class="fit-icon">📊</div>
-        <p><strong>Know your way around complex, data-heavy products</strong>Deep expertise designing for heavy data B2B products, not just clean consumer flows.</p>
-      </div>
-      <div class="fit-card">
-        <div class="fit-icon">🎨</div>
-        <p><strong>Are fluent in Figma at scale</strong>Comfortable with distributed version control tools and production-ready handoff.</p>
-      </div>
-      <div class="fit-card">
-        <div class="fit-icon">🧭</div>
-        <p><strong>Can own the full design process</strong>From discovery and research through high-fidelity design and implementation support.</p>
-      </div>
-      <div class="fit-card">
-        <div class="fit-icon">🤝</div>
-        <p><strong>Lead and mentor without needing the title</strong>You've led research and design initiatives and enjoy raising the bar for those around you.</p>
-      </div>
-      <div class="fit-card">
-        <div class="fit-icon">🌍</div>
-        <p><strong>Thrive across time zones and cultures</strong>Fluent in English, comfortable managing multiple workstreams with PMs, engineers and stakeholders across regions.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="benefits">
-  <div class="wrap">
-    <div class="eyebrow">Compensation & benefits</div>
-    <h2>What you'll get</h2>
-    <p class="lede">Exact figures are confirmed during the interview process — here's the shape of the package. Edit these to match your final offer structure.</p>
-    <div class="comp-grid">
-      <div class="comp-card">
-        <div class="fit-icon">💰</div>
-        <h3>Competitive base salary</h3>
-        <p>Benchmarked to Dubai's tech market for Staff-level design talent. [Add specific range]</p>
-      </div>
-      <div class="comp-card">
-        <div class="fit-icon">📈</div>
-        <h3>Equity & variable bonus</h3>
-        <p>Eligible for equity and an annual performance bonus tied to company and individual goals.</p>
-      </div>
-      <div class="comp-card">
-        <div class="fit-icon">🏥</div>
-        <h3>Health & wellness</h3>
-        <p>Comprehensive medical insurance for you and your dependents. [Add plan details]</p>
-      </div>
-      <div class="comp-card">
-        <div class="fit-icon">✈️</div>
-        <h3>Relocation support</h3>
-        <p>Assistance for candidates relocating to Dubai, including visa sponsorship. [Add specifics]</p>
-      </div>
-      <div class="comp-card">
-        <div class="fit-icon">📚</div>
-        <h3>Learning budget</h3>
-        <p>Annual budget for courses, conferences, and design tools to keep growing your craft.</p>
-      </div>
-      <div class="comp-card">
-        <div class="fit-icon">🎉</div>
-        <h3>Time off</h3>
-        <p>Generous annual leave plus regional public holidays. [Confirm exact days]</p>
-      </div>
-    </div>
-    <p class="comp-note">Placeholder content — swap in your finalized compensation and benefits details before publishing.</p>
-  </div>
-</section>
-
-<section class="alt" id="faq">
-  <div class="wrap">
-    <div class="eyebrow" style="text-align:center;">FAQ</div>
-    <h2 class="center">Frequently asked questions</h2>
-    <p class="lede center">Answers based on the job description — reach out to your recruiter for anything more specific.</p>
-    <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-question">
-          What does the interview process look like?
-          <span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
-        </button>
-        <div class="faq-answer">
-          <p>[Placeholder] Expect an initial recruiter screen, followed by a portfolio review with the hiring manager, a design exercise or whiteboard session with the team, and a final round with cross-functional stakeholders. Timeline is typically 3–4 weeks end to end — your recruiter will walk you through the specifics for this role.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Is this role remote, hybrid, or in-office?
-          <span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
-        </button>
-        <div class="faq-answer">
-          <p>This is an on-site role based at talabat's Dubai Tech Hub. You'll be working in person with the local team while collaborating remotely with Berlin-based colleagues.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          What does success look like in the first 6 months?
-          <span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
-        </button>
-        <div class="faq-answer">
-          <p>[Placeholder] In the first 90 days, you'll ramp up on the Qcommerce Hub's products and processes, build relationships with your Berlin counterparts, and start owning end-to-end design for at least one squad. By month six, you'll be setting design direction independently and mentoring other designers on the team.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Who will I be working with day to day?
-          <span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
-        </button>
-        <div class="faq-answer">
-          <p>You'll partner closely with product managers, engineers, and researchers across the Qcommerce Hub squads, plus your design manager and design peers shown in the "Meet the team" section above. You'll also regularly engage with Berlin-based global teams to align on standards.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          How do I stand out as a candidate?
-          <span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
-        </button>
-        <div class="faq-answer">
-          <p>Bring a portfolio that shows end-to-end ownership — discovery through shipped product — ideally on complex, data-heavy B2B or marketplace experiences. Be ready to talk about a time you led design strategy across teams or mentored other designers, and show comfort operating in ambiguity across a large, multi-market organization.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="cta" id="apply">
-  <div class="wrap">
-    <h2>Ready to shape quick commerce for the region?</h2>
-    <p>Bring your craft, your leadership, and your curiosity — we'll bring the scale.</p>
-    <a href="https://jobs.smartrecruiters.com/oneclick-ui/company/DeliveryHero/publication/639fb736-1c87-4c2d-b922-86ae0f1b1a3d?dcr_ci=DeliveryHero&sid=d36bd984-ac64-4485-84c6-e1569efc1ec5" target="_blank" rel="noopener" class="btn btn-white" style="background:var(--orange);color:#fff;">Apply now →</a>
-  </div>
-</section>
+</main>
 
 <footer>
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="logo" style="color:#fff;">talabat</div>
-      <div class="footer-links">
-        <a href="#about">About Us</a>
-        <a href="#role">The Role</a>
-        <a href="#team">Team</a>
-        <a href="#benefits">Benefits</a>
-        <a href="#faq">FAQ</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 talabat, a Delivery Hero company. All rights reserved.</span>
-      <div class="social">
-        <a href="https://www.linkedin.com/company/talabat-com/home/" target="_blank" rel="noopener" aria-label="talabat on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
-      </div>
-    </div>
-  </div>
+  © 2026 talabat, a Delivery Hero company.
 </footer>
-
-<script>
-  document.querySelectorAll('.faq-question').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var item = btn.closest('.faq-item');
-      var answer = item.querySelector('.faq-answer');
-      var isOpen = item.classList.contains('open');
-
-      document.querySelectorAll('.faq-item.open').forEach(function(openItem){
-        if (openItem !== item) {
-          openItem.classList.remove('open');
-          openItem.querySelector('.faq-answer').style.maxHeight = null;
-        }
-      });
-
-      if (isOpen) {
-        item.classList.remove('open');
-        answer.style.maxHeight = null;
-      } else {
-        item.classList.add('open');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-      }
-    });
-  });
-</script>
 
 </body>
 </html>
