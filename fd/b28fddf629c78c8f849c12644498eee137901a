@@ -1,0 +1,21 @@
+index.html
+  s_2ef5a89373c2b9::t_375129951b3c7a 6,19,33-34,36-38,40-43,45,47-52,54-57,59,62-63,66-69,75,77-79,83,85-93,95-96,99,102
+staff-product-designer-dubai/index.html
+  s_2ef5a89373c2b9::t_ab01256d43f803 1-559
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "fdb28fddf629c78c8f849c12644498eee137901a",
+  "prompts": {},
+  "sessions": {
+    "s_2ef5a89373c2b9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3ca05d0d-6399-45d9-b7e8-52bf816df606",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Mohammad Azaz <mohammad.azaz@deliveryhero.com>"
+    }
+  }
+}
